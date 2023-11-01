@@ -1,0 +1,60 @@
+header {
+    background-color: #007BFF; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Espaciado interno del encabezado */
+    text-align: center; /* Centrar el texto en el encabezado */
+    margin: 0; /* Eliminar márgenes */
+    width: 100%; /* Ancho completo */
+}
+
+
+/* Estilo para el body (cuerpo) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0; /* Eliminar márgenes en el cuerpo */
+    padding: 0; /* Eliminar relleno en el cuerpo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    background-color: #fff;
+    width: 90%; /* El formulario ocupará el 90% del ancho de la pantalla */
+    max-width: 400px; /* Limita el ancho máximo del formulario */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

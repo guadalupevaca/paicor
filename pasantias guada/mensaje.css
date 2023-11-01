@@ -1,0 +1,30 @@
+/* Estilos para el mensaje de éxito */
+.success-message {
+    background-color: #4CAF50; /* Fondo verde para éxito */
+    color: white; /* Texto blanco */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+    font-weight: bold;
+}
+
+/* Estilos para el mensaje de error */
+.error-message {
+    background-color: #FF5733; /* Fondo rojo para error */
+    color: white; /* Texto blanco */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+    font-weight: bold;
+}
+
+/* Estilos para el botón */
+.btn {
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    text-decoration: none; /* Eliminar subrayado de enlace */
+    display: inline-block;
+    margin-top: 10px; /* Espacio superior para separar del mensaje */
+}
