@@ -5,48 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="verduleria.css">
 
-    <title>Document</title>
+    <title>Pedido de Verdulería</title>
 </head>
 <body>
 <header>
-        <h1> pedido de verduleria</h1>
+    <h1>Pedido de Verdulería</h1>
 </header>
 <form action="procesar_pedidoverduleria.php" method="POST">
-        <label for="papas">Papas:</label>
-        <input type="text" name="papas"><br>
+    <label for="acelga">Acelga:</label>
+    <input type="text" name="acelga"><br>
 
-        <label for="tomate">Tomate:</label>
-        <input type="text" name="tomate"><br>
+    <label for="ajo">Ajo:</label>
+    <input type="text" name="ajo"><br>
 
-        <label for="cebolla">Cebolla:</label>
-        <input type="text" name="cebolla" ><br>
+    <label for="bananas">Bananas:</label>
+    <input type="text" name="bananas"><br>
 
-        <label for="zanahoria">Zanahoria:</label>
-        <input type="text" name="zanahoria" ><br>
+    <label for="calabacin">Calabacin:</label>
+    <input type="text" name="calabacin"><br>
 
-        <label for="choclo">Choclo:</label>
-        <input type="text" name="Choclo" ><br>
+    <label for="cebolla">Cebolla:</label>
+    <input type="text" name="cebolla"><br>
 
-        <label for="zapallitos">Zapallito:</label>
-        <input type="text" name="zapallitos" ><br>
+    <label for="limon">Limón:</label>
+    <input type="text" name="limon"><br>
 
-        <label for="calabacin">Calabacin:</label>
-        <input type="text" name="Calabacin" ><br>
-        
-        <label for="lechuga">Lechuga:</label>
-        <input type="text" name="lechuga" ><br>
+    <label for="mandarinas">Mandarinas:</label>
+    <input type="text" name="mandarinas"><br>
 
-        <label for="acelga">Acelga:</label>
-        <input type="text" name="Acelga" ><br>
+    <label for="manzanas">Manzanas:</label>
+    <input type="text" name="manzanas"><br>
 
-        <label for="berenjena">Berenjena:</label>
-        <input type="text" name="Berenjena" ><br>
+    <label for="naranjas">Naranjas:</label>
+    <input type="text" name="naranjas"><br>
 
-        <label for="espinaca">Espinaca:</label>
-        <input type="text" name="espinaca" ><br>
+    <label for="papas">Papas:</label>
+    <input type="text" name="papas"><br>
 
-        <input type="submit" value="Guardar pedido">
+    <label for="pimientos">Pimientos:</label>
+    <input type="text" name="pimientos"><br>
 
- </form>
+    <label for="remolachas">Remolachas:</label>
+    <input type="text" name="remolachas"><br>
+
+    <label for="tomate">Tomate:</label>
+    <input type="text" name="tomate"><br>
+
+    <label for="zanahorias">Zanahorias:</label>
+    <input type="text" name="zanahorias"><br>
+
+    <label for="zapallito">Zapallito:</label>
+    <input type="text" name="zapallito"><br>
+
+    <label for="zapallos">Zapallos:</label>
+    <input type="text" name="zapallos"><br>
+
+    <label for="cajon_estacion">Cajón de Estación:</label>
+    <input type="text" name="cajon_estacion"><br>
+
+    <label for="otros_productos">Otros Productos Adicionales:</label>
+    <textarea name="otros_productos" rows="4" cols="50"></textarea><br>
+
+    <label for="fecha_pedido">Fecha del Pedido:</label>
+    <input type="date" name="fecha_pedido"><br>
+
+    <input type="submit" value="Guardar pedido">
+</form>
 </body>
 </html>

@@ -1,60 +1,53 @@
-header {
-    background-color: #007BFF; /* Color de fondo del encabezado */
-    color: #fff; /* Color del texto */
-    padding: 10px; /* Espaciado interno del encabezado */
-    text-align: center; /* Centrar el texto en el encabezado */
-    margin: 0; /* Eliminar márgenes */
-    width: 100%; /* Ancho completo */
-}
-
-
-/* Estilo para el body (cuerpo) */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0; /* Eliminar márgenes en el cuerpo */
-    padding: 0; /* Eliminar relleno en el cuerpo */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #f0f0f0;
 }
 
-form {
+h1 {
+    text-align: center;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Estilos para el botón de enlace interno */
+.aviso-link {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #007bff;
+    padding: 5px 10px;
+    margin: 10px;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    border-radius: 3px;
+}
+
+.aviso-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilos para el aviso */
+.aviso {
+    text-align: center;
+    color: #beb9b9;
+}
+
+/* Estilos para el formulario y secciones */
+form, section {
     background-color: #fff;
-    width: 90%; /* El formulario ocupará el 90% del ancho de la pantalla */
-    max-width: 400px; /* Limita el ancho máximo del formulario */
+    margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    box-sizing: border-box;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
+h2 {
+    text-align: center;
 }

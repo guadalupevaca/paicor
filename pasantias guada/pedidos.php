@@ -19,7 +19,10 @@
             <a href="carniceria.php">Pedidos de Carniceria</a>
             <a href="verduleria.php">Pedidos de Verduleria</a>
             <a href="almacen.php">Pedidos de Almacen</a>
+            <a href="panaderia.php">Pedidos de Panaderia</a>
             <a href="limpieza.php">Pedidos de Limpieza</a>
+
+
         </div>
     </div>
 

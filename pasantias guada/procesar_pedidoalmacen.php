@@ -1,45 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="mensaje.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html><?php
-// Conectar a la base de datos (ajusta los datos de conexión según tu configuración)
-$conexion = mysqli_connect("localhost", "root", "", "pasantias") or die("No se puede conectar a la base de datos.");
+<?php
 
-// Obtener los datos del formulario y asegurarte de que no estén vacíos
-$fideos = mysqli_real_escape_string($conexion, $_POST['fideos']);
-$aceite = mysqli_real_escape_string($conexion, $_POST['aceite']);
-$fideos_largos = mysqli_real_escape_string($conexion, $_POST['fideos_largos']);
-$polenta = mysqli_real_escape_string($conexion, $_POST['polenta']);
-$arroz = mysqli_real_escape_string($conexion, $_POST['arroz']);
-$leche = mysqli_real_escape_string($conexion, $_POST['leche']);
-$huevos = mysqli_real_escape_string($conexion, $_POST['huevos']);
-$arbejas = mysqli_real_escape_string($conexion, $_POST['arbejas']);
-$lentejas = mysqli_real_escape_string($conexion, $_POST['lentejas']);
-$pure_de_tomate = mysqli_real_escape_string($conexion, $_POST['pure_de_tomate']);
+$conexion = mysqli_connect("localhost", "root", "", "paicor") or die("No se puede conectar a la base de datos.");
 
-// Puedes realizar cualquier procesamiento adicional de los datos aquí, como almacenarlos en una base de datos.
 
-// Crear la consulta SQL para insertar los datos en la tabla de registros de pedidos
-$sql = "INSERT INTO almacen (fideos, aceite, fideos_largos, polenta, arroz, leche, huevos, arbejas, lentejas, pure_de_tomate) 
-        VALUES ('$fideos', '$aceite', '$fideos_largos', '$polenta', '$arroz', '$leche', '$huevos', '$arbejas', '$lentejas', '$pure_de_tomate')";
+// Obtener los datos del formulario
+$aceite = $_POST['aceite'];
+$unidad_aceite = $_POST['unidad_aceite'];
+$ajo_deshidratado = $_POST['ajo_deshidratado'];
+$unidad_ajo_deshidratado = $_POST['unidad_ajo_deshidratado'];
+$arroz = $_POST['arroz'];
+$unidad_arroz = $_POST['unidad_arroz'];
+$arvejas = $_POST['arvejas'];
+$azucar = $_POST['azucar'];
+$cacao = $_POST['cacao'];
+$unidad_cacao = $_POST['unidad_cacao'];
+$choclo = $_POST['choclo'];
+$chocolate = $_POST['chocolate'];
+$comino = $_POST['comino'];
+$unidad_comino = $_POST['unidad_comino'];
+$dulce_de_batata = $_POST['dulce_de_batata'];
+$dulce_de_membrillo = $_POST['dulce_de_membrillo'];
+$fecula = $_POST['fecula'];
+$fideos_guiseros = $_POST['fideos_guiseros'];
+$fideos_tallarines = $_POST['fideos_tallarines'];
+$flan = $_POST['flan'];
+$unidad_flan = $_POST['unidad_flan'];
+$harina_de_maiz = $_POST['harina_de_maiz'];
+$huevos = $_POST['huevos'];
+$laurel = $_POST['laurel'];
+$lentejas = $_POST['lentejas'];
+$maicena = $_POST['maicena'];
+$maiz_molido = $_POST['maiz_molido'];
+$malta = $_POST['malta'];
+$manteca = $_POST['manteca'];
+$oregano = $_POST['oregano'];
+$unidad_oregano = $_POST['unidad_oregano'];
+$perejil = $_POST['perejil'];
+$pimenton = $_POST['pimenton'];
+$porotos = $_POST['porotos'];
+$provenzal = $_POST['provenzal'];
+$unidad_provenzal = $_POST['unidad_provenzal'];
+$pure_de_tomate = $_POST['pure_de_tomate'];
+$sal_fina = $_POST['sal_fina'];
+$sal_gruesa = $_POST['sal_gruesa'];
+$tomate_triturado = $_POST['tomate_triturado'];
+$trigo_burgol = $_POST['trigo_burgol'];
+$vinagre = $_POST['vinagre'];
+$leche = $_POST['leche'];
+$queso_cremoso = $_POST['queso_cremoso'];
+$queso_rallar = $_POST['queso_rallar'];
+$queso_senda = $_POST['queso_senda'];
+$yogur = $_POST['yogur'];
 
-// Ejecutar la consulta
-if (mysqli_query($conexion, $sql)) 
-    if (mysqli_query($conexion, $sql)) {
-        echo '<div class="success-message">Pedido enviado.</div>';
-        echo '<a href="pedidos.php" class="btn">Ir a la página</a>'; // Reemplaza "tu_pagina.php" con la URL de la página a la que deseas enlazar.
-    } else {
-        echo '<div class="error-message">Error al registrar el pedido: ' . mysqli_error($conexion) . '</div>';
-    }
+$otro_producto = $_POST['otro_producto'];
+$cantidad_otro = $_POST['cantidad_otro'];
+
+$fecha_pedido = $_POST['fecha_pedido'];
+
+$colacion_producto = $_POST['colacion_producto'];
+$colacion_cantidad = $_POST['colacion_cantidad'];
+
+// Insertar los datos en la tabla
+$sql = "INSERT INTO pedido_almacen (aceite, unidad_aceite, ajo_deshidratado, unidad_ajo_deshidratado, arroz, unidad_arroz, arvejas, azucar, cacao, unidad_cacao, choclo, chocolate, comino, unidad_comino, dulce_de_batata, dulce_de_membrillo, fecula, fideos_guiseros, fideos_tallarines, flan, unidad_flan, harina_de_maiz, huevos, laurel, lentejas, maicena, maiz_molido, malta, manteca, oregano, unidad_oregano, perejil, pimenton, porotos, provenzal, unidad_provenzal, pure_de_tomate, sal_fina, sal_gruesa, tomate_triturado, trigo_burgol, vinagre, leche, queso_cremoso, queso_rallar, queso_senda, yogur, otro_producto, cantidad_otro, fecha_pedido, colacion_producto, colacion_cantidad) 
+        VALUES ('$aceite', '$unidad_aceite', '$ajo_deshidratado', '$unidad_ajo_deshidratado', '$arroz', '$unidad_arroz', '$arvejas', '$azucar', '$cacao', '$unidad_cacao', '$choclo', '$chocolate', '$comino', '$unidad_comino', '$dulce_de_batata', '$dulce_de_membrillo', '$fecula', '$fideos_guiseros', '$fideos_tallarines', '$flan', '$unidad_flan', '$harina_de_maiz', '$huevos', '$laurel', '$lentejas', '$maicena', '$maiz_molido', '$malta', '$manteca', '$oregano', '$unidad_oregano', '$perejil', '$pimenton', '$porotos', '$provenzal', '$unidad_provenzal', '$pure_de_tomate', '$sal_fina', '$sal_gruesa', '$tomate_triturado', '$trigo_burgol', '$vinagre', '$leche', '$queso_cremoso', '$queso_rallar', '$queso_senda', '$yogur', '$otro_producto', '$cantidad_otro', '$fecha_pedido', '$colacion_producto', '$colacion_cantidad')";
+
+if ($conexion->query($sql) === TRUE) {
+    echo "Pedido almacenado correctamente.";
+} else {
+    echo "Error al almacenar el pedido: " . $conexion->error;
+}
 
 // Cerrar la conexión a la base de datos
-mysqli_close($conexion);
+$conexion->close();
 ?>

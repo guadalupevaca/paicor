@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="mensaje.css">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="pedidocarne.css">
+    <title>Resultado del Pedido de Carnicería y Pollería</title>
 </head>
 <body>
-    
-</body>
-</html><?php
-// Conectar a la base de datos (ajusta los datos de conexión según tu configuración)
-$conexion = mysqli_connect("localhost", "root", "", "pasantias") or exit("No se puede conectar a la base de datos.");
+<?php
+$conexion = mysqli_connect("localhost", "root", "", "pasantias") or die("No se puede conectar a la base de datos.");
 
-// Obtener los datos del formulario
-$carne_molida = mysqli_real_escape_string($conexion, $_POST['carne_molida']);
-$carne_picada = mysqli_real_escape_string($conexion, $_POST['carne_picada']);
-$costeletas = mysqli_real_escape_string($conexion, $_POST['costeletas']);
-$agujas = mysqli_real_escape_string($conexion, $_POST['Agujas']);
-$bifes = mysqli_real_escape_string($conexion, $_POST['Bifes']);
-$pechuga_pollo = mysqli_real_escape_string($conexion, $_POST['pechuga_pollo']);
-$alita_pollo = mysqli_real_escape_string($conexion, $_POST['alita_pollo']);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $fechaPedido = mysqli_real_escape_string($conexion, $_POST['fecha_pedido']);
 
-// Puedes realizar cualquier procesamiento adicional de los datos aquí, como almacenarlos en una base de datos.
+    // Datos de la Carnicería
+    $carneCerdo = mysqli_real_escape_string($conexion, $_POST['carne_cerdo']);
+    $carneHorno = mysqli_real_escape_string($conexion, $_POST['carne_horno']);
+    $carneSalsa = mysqli_real_escape_string($conexion, $_POST['carne_salsa']);
+    $carneMolida = mysqli_real_escape_string($conexion, $_POST['carne_molida']);
+    $milanesaVaca = mysqli_real_escape_string($conexion, $_POST['milanesa_vaca']);
 
-// Crear la consulta SQL para insertar los datos en la tabla de registros de pedidos
-$sql = "INSERT INTO pedidos (carne_molida, carne_picada, costeletas, agujas, bifes, pechuga_pollo, alita_pollo) 
-        VALUES ('$carne_molida', '$carne_picada', '$costeletas', '$agujas', '$bifes', '$pechuga_pollo', '$alita_pollo')";
+    // Datos de la Pollería
+    $milanesaPollo = mysqli_real_escape_string($conexion, $_POST['milanesa_pollo']);
+    $pollo = mysqli_real_escape_string($conexion, $_POST['pollo']);
 
-// Ejecutar la consulta
-if (mysqli_query($conexion, $sql)) 
+    // Otros Productos Adicionales
+    $otrosProductos = mysqli_real_escape_string($conexion, $_POST['otros_productos']);
+
+    $sql = "INSERT INTO pedidos_carniceria (fecha_pedido, carne_cerdo, carne_horno, carne_salsa, carne_molida, milanesa_vaca, milanesa_pollo, pollo, otros_productos)
+            VALUES ('$fechaPedido', '$carneCerdo', '$carneHorno', '$carneSalsa', '$carneMolida', '$milanesaVaca', '$milanesaPollo', '$pollo', '$otrosProductos')";
+
     if (mysqli_query($conexion, $sql)) {
         echo '<div class="success-message">Pedido enviado.</div>';
-        echo '<a href="pedidos.php" class="btn">Ir a la página</a>'; // Reemplaza "tu_pagina.php" con la URL de la página a la que deseas enlazar.
+        echo '<a href="pedidos.php" class="btn">Ir a la página</a>'; // Reemplaza "pedidos.php" con la URL de la página a la que deseas enlazar.
     } else {
         echo '<div class="error-message">Error al registrar el pedido: ' . mysqli_error($conexion) . '</div>';
     }
+}
 
-// Cerrar la conexión a la base de datos
 mysqli_close($conexion);
 ?>
+</body>
+</html>
