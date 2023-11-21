@@ -5,14 +5,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST["nombre"];
     $fecha_pedido = $_POST["fecha_pedido"];
     $carne_cerdo = $_POST["carne_cerdo"];
+    $fecha_entrega_carne_cerdo =$_POST["fecha_entrega_carne_cerdo"];
     $carne_horno = $_POST["carne_horno"];
+    $fecha_entrega_carne_horno =$_POST["fecha_entrega_carne_horno"];
     $carne_salsa = $_POST["carne_salsa"];
+    $fecha_entrega_carne_salsa =$_POST["fecha_entrega_carne_salsa"];
     $carne_molida = $_POST["carne_molida"];
+    $fecha_entrega_carne_molida =$_POST["fecha_entrega_carne_molida"];
     $milanesa_vaca = $_POST["milanesa_vaca"];
+    $fecha_entrega_milanesa_vaca =$_POST["fecha_entrega_milanesa_vaca"];
     $milanesa_pollo = $_POST["milanesa_pollo"];
+    $fecha_entrega_milanesa_pollo =$_POST["fecha_entrega_milanesa_pollo"];
     $pollo = $_POST["pollo"];
+    $fecha_entrega_pollo =$_POST["fecha_entrega_pollo"];
 
-    // ... otros campos del formulario ...
+    
 
     // Conexión a la base de datos (reemplaza con tus credenciales)
     $conexion = mysqli_connect("localhost", "root", "", "paicor") or die("No se puede conectar a la base de datos.");
@@ -24,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_colegio = $nombre;
 
     // Inserta el pedido en la tabla de carnicería
-    $insert_query = "INSERT INTO pedidos_carniceria (nombre, fecha_pedido, carne_cerdo, carne_horno, carne_salsa, carne_molida, milanesa_vaca, milanesa_pollo, pollo) 
-        VALUES ('$nombre', '$fecha_pedido', '$carne_cerdo', '$carne_horno', '$carne_salsa', '$carne_molida', '$milanesa_vaca', '$milanesa_pollo', '$pollo')";
+    $insert_query = "INSERT INTO pedidos_carniceria (nombre, fecha_pedido, carne_cerdo, fecha_entrega_carne_cerdo, carne_horno, fecha_entrega_carne_horno, carne_salsa, fecha_entrega_carne_salsa, carne_molida, fecha_entrega_carne_molida, milanesa_vaca, fecha_entrega_milanesa_vaca, milanesa_pollo, fecha_entrega_milanesa_pollo, pollo, fecha_entrega_pollo) 
+        VALUES ('$nombre', '$fecha_pedido', '$carne_cerdo', '$fecha_entrega_carne_cerdo', '$carne_horno', '$fecha_entrega_carne_horno', '$carne_salsa', '$fecha_entrega_carne_salsa', '$carne_molida', '$fecha_entrega_carne_molida', '$milanesa_vaca', '$fecha_entrega_milanesa_vaca', '$milanesa_pollo', '$fecha_entrega_milanesa_pollo', '$pollo', '$fecha_entrega_pollo')";
 
     if ($conexion->query($insert_query) === TRUE) {
         echo "Pedido ingresado exitosamente.";

@@ -42,27 +42,34 @@
 
             <label for="carne_cerdo">Carne de Cerdo:</label>
             <input type="text" name="carne_cerdo"><br>
+            <input type="date" name="fecha_entrega_carne_cerdo"><br>
 
             <label for="carne_horno">Carne para Horno:</label>
             <input type="text" name="carne_horno"><br>
+            <input type="date" name="fecha_entrega_carne_horno"><br>
 
             <label for="carne_salsa">Carne para Salsa:</label>
             <input type="text" name="carne_salsa"><br>
+            <input type="date" name="fecha_entrega_carne_salsa"><br>
 
             <label for="carne_molida">Carne Molida:</label>
             <input type="text" name="carne_molida"><br>
+            <input type="date" name="fecha_entrega_carne_molida"><br>
 
             <label for="milanesa_vaca">Milanesa de Vaca:</label>
             <input type="text" name="milanesa_vaca"><br>
+            <input type="date" name="fecha_entrega_milanesa_vaca"><br>
         </div>
 
         <div class="polleria">
             <h2>Pollería</h2>
             <label for="milanesa_pollo">Milanesa de Pollo:</label>
             <input type="text" name="milanesa_pollo"><br>
+            <input type="date" name="fecha_entrega_milanesa_pollo"><br>
 
             <label for="pollo">Pollo:</label>
             <input type="text" name="pollo"><br>
+            <input type="date" name="fecha_entrega_pollo"><br>
         </div>
 
         <label for="otros_productos">Otros Productos Adicionales:</label>
