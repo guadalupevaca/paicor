@@ -34,18 +34,24 @@
 
     <label for="facturas">Facturas:</label>
     <input type="text" name="facturas"><br>
+    <label for="fecha_entrega_facturas">entrega:</label>
+    <input type="date" name="fecha_entrega_facturas"><br>
 
     <label for="pan_criollo">Pan Criollo:</label>
     <input type="text" name="pan_criollo"><br>
+    <input type="date" name="fecha_entrega_pan_criollo"><br>
 
     <label for="pan_de_leche">Pan de Leche:</label>
     <input type="text" name="pan_de_leche"><br>
+    <input type="date" name="fecha_entrega_pan_de_leche"><br>
 
     <label for="pan_frances">Pan Francés:</label>
     <input type="text" name="pan_frances"><br>
+    <input type="date" name="fecha_entrega_pan_frances"><br>
 
     <label for="pan_rallado">Pan Rallado:</label>
     <input type="text" name="pan_rallado"><br>
+    <input type="date" name="fecha_entrega_pan_rallado"><br>
 
     <label for="otros_productos">Otros Productos Adicionales:</label>
     <textarea name="otros_productos" rows="4" cols="50"></textarea><br>
