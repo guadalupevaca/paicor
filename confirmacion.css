@@ -1,0 +1,89 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente principal */
+    background-color: #f5f5f5; /* Color de fondo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado de la página */
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto del encabezado */
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 36px; /* Tamaño de fuente para el encabezado principal */
+}
+
+/* Estilos para el contenido principal */
+main {
+    max-width: 800px; /* Ancho máximo del contenido principal */
+    margin: 20px auto; /* Márgenes exteriores */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Color de fondo del contenido principal */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para los párrafos */
+p {
+    color: #333; /* Color del texto */
+    line-height: 1.6; /* Altura de línea */
+}
+
+/* Estilos para las listas no ordenadas */
+ul {
+    list-style-type: none; /* Elimina viñetas de las listas */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+li {
+    margin-bottom: 10px; /* Margen inferior para los elementos de la lista */
+}
+
+/* Estilos para los enlaces */
+a {
+    display: block; /* Hace que los enlaces ocupen todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    background-color: #000000; /* Color de fondo del enlace */
+    color: #fff; /* Color del texto del enlace */
+    text-decoration: none; /* Elimina la subrayado del enlace */
+    border-radius: 5px; /* Borde redondeado */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+/* Estilos para el estado hover de los enlaces */
+a:hover {
+    background-color: #000000; /* Cambio de color de fondo al pasar el ratón */
+}
+
+/* Estilos para el estado activo de los enlaces */
+a:active {
+    background-color: #003366; /* Cambio de color de fondo al hacer clic en el enlace */
+}
+
+/* Estilos para los enlaces visitados */
+a, a:visited {
+    color: #fff; /* Color del texto de los enlaces visitados */
+}
+
+/* Estilos específicos para el enlace que apunta a "pedidos.php" */
+a[href="pedidos.php"] {
+    margin-top: 20px; /* Margen superior adicional */
+    background-color: #333; /* Color de fondo del enlace */
+}
+
+/* Estilos para el estado hover del enlace "pedidos.php" */
+a[href="pedidos.php"]:hover {
+    background-color: #555; /* Cambio de color de fondo al pasar el ratón */
+}
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: 20px; /* Margen superior adicional */
+    text-align: center; /* Alineación del texto al centro */
+    color: #000000; /* Color del texto del pie de página */
+}

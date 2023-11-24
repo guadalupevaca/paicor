@@ -1,0 +1,49 @@
+/* Estilos para el formulario y los botones */
+form {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centrar el formulario en la página */
+    padding: 20px; /* Espaciado interno del formulario */
+    background-color: #fff; /* Color de fondo del formulario */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select, input[type="submit"] {
+    width: 100%; /* Los campos de entrada y el botón ocupan todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Borde delgadp */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+input[type="submit"] {
+    background-color: #333; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+input[type="submit"]:hover {
+    background-color: #555; /* Cambio de color de fondo al pasar el ratón */
+}
+
+/* Estilos para el enlace "Ir a Otra Página" */
+a[href="confirmacion.php"] {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+a[href="confirmacion.php"]:hover {
+    background-color: #555;
+}
